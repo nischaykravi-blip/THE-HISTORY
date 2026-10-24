@@ -58,7 +58,7 @@ export function EraPage() {
   return (
     <div className="era-page" id="top">
       <div className="breadcrumbs" aria-label="Breadcrumb">
-        <Link to="/">Home</Link><span>/</span><a href="/#eras">The eras</a><span>/</span><span aria-current="page">{era.title}</span>
+        <Link to="/">Home</Link><span>/</span><a href={`${import.meta.env.BASE_URL}#eras`}>The eras</a><span>/</span><span aria-current="page">{era.title}</span>
       </div>
       <section className={`era-masthead ${era.tone}`}>
         <div className="era-masthead-image"><img src={era.image} alt={era.imageAlt} /><span className="masthead-index">VOLUME {era.index}</span></div>

@@ -14,8 +14,8 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
         </Link>
         <nav className="site-nav" aria-label="Main navigation">
           <Link className={isHome ? 'nav-link active' : 'nav-link'} to="/">Home</Link>
-          <a className="nav-link" href={isHome ? '#eras' : '/#eras'}>The eras</a>
-          <a className="nav-link nav-index" href={isHome ? '#about' : '/#about'}>About the registry</a>
+          <a className="nav-link" href={`${import.meta.env.BASE_URL}#eras`}>The eras</a>
+          <a className="nav-link nav-index" href={`${import.meta.env.BASE_URL}#about`}>About the registry</a>
         </nav>
         {!isHome && <Link className="back-link" to="/"><ArrowLeft size={15} /> <span>All eras</span></Link>}
       </header>
